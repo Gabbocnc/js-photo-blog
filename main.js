@@ -13,7 +13,7 @@ axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6")
 
 
         const markup =  ` 
-        <div class="col-xs-12 postit">
+        <div class="col-xs-12 col-lg-4 col-xx-4 postit">
             <div class="pin"><img src="./assets/img/pin.svg" alt=""></div>
             <img src="${url}" alt="">
             <div class="div cardtext">${title}</div>
@@ -23,6 +23,7 @@ axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6")
     });
         myRowEl.innerHTML = postItsEl
         //console.log(postEl);
-        
+    
+       
 })
 

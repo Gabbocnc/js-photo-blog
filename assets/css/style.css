@@ -10,6 +10,14 @@ img{
 
 .myrow{
     flex-direction: column;
+
+    @media (min-width: 992px) {
+        flex-direction:row;
+        flex-wrap: wrap;
+    }
+    @media (min-width: 1400px) {
+        padding: 50px;
+    }
 }
 
 
@@ -32,14 +40,16 @@ body{
 
 
 .postit{
-    width: 330px;
-    height: 350px;
+    max-width: 300px;
+    max-height: 350px;
     background-color: rgb(255, 255, 255);
     padding: 10px;
     box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
     margin: 20px auto;
     position: relative;
     margin-bottom: 50px;
+    margin-top: 70px;
+
 }
 
 .pin{
@@ -49,9 +59,17 @@ body{
 }
 .postit img {
     width: 100%;
-    height: 80%;
+    height: 50%;
     object-fit: cover;
+    @media (min-width: 992px) {
+        height: 80%;
+    }
 }
 .cardtext{
     margin-top: 10px;
 }
+
+.postit:hover{
+  transform: rotate(10deg) scale(1.2);
+}
+
