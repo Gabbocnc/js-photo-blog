@@ -1,10 +1,10 @@
 const postEl = document.querySelector('.postit');
-console.log(postEl);
+//console.log(postEl);
 
 axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6")
 .then(response =>{
     const postIts = response.data
-    console.log(postIts);
+    //console.log(postIts);
 
     let postItsEl = ''
     postIts.forEach(postIt => {
@@ -22,7 +22,7 @@ axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6")
         postItsEl += markup
     });
         postEl.innerHTML = postItsEl
-        console.log(postEl);
+        //console.log(postEl);
         
 })
 
