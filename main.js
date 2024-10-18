@@ -1,5 +1,5 @@
-const postEl = document.querySelector('.postit');
-//console.log(postEl);
+const myRowEl = document.querySelector('.myrow');
+//console.log(myRowEl);
 
 axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6")
 .then(response =>{
@@ -21,7 +21,7 @@ axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6")
         `
         postItsEl += markup
     });
-        postEl.innerHTML = postItsEl
+        myRowEl.innerHTML = postItsEl
         //console.log(postEl);
         
 })
