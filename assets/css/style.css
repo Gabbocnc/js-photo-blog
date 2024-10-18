@@ -34,11 +34,11 @@ main{
 
 
 .postit{
-    width: 280px;
-    height: 300px;
+    width: 330px;
+    height: 350px;
     background-color: white;
     padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
     margin: 20px auto;
     position: relative;
 }
