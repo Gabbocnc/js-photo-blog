@@ -6,9 +6,11 @@
 img{
     width: 100%;
 }
+header{
+    background-image: url(../img/wall.png);
+}
 .title{
     text-align: center;
-    background-color: rgb(180, 179, 179);
     padding: 10px;
     font-size: 100px;
     font-weight: 700;
