@@ -13,14 +13,20 @@ axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6")
         let postItsEl = ''
         postIts.forEach(postIt => {
 
-            const { url, title } = postIt
+            const { url, title } = postIt;
+            //console.log(postIt);
+            
+            const upperCaseTitle = title.charAt(0).toUpperCase() + title.slice(1)
+            console.log(upperCaseTitle);
+            
+
 
 
             const markup = ` 
         <div class="col-xs-12 col-lg-4 col-xx-4 postit">
             <div class="pin"><img src="./assets/img/pin.svg" alt=""></div>
             <div class="randomImage"><img src="${url}" alt=""></div>
-            <div class="div cardtext">${title}</div>
+            <div class="div cardtext">${upperCaseTitle}</div>
         </div>
         `
             postItsEl += markup
