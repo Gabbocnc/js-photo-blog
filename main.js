@@ -3,6 +3,7 @@ const myRowEl = document.querySelector('.myrow');
 const modalEl = document.getElementById('myModal');
 const modalImgEl = document.getElementById('modalImage');
 const modalTitleEl = document.getElementById('modalTitle');
+const closeModalEl = document.querySelector('.closeModal');
 
 axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6")
     .then(response => {
@@ -18,7 +19,7 @@ axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6")
             const markup = ` 
         <div class="col-xs-12 col-lg-4 col-xx-4 postit">
             <div class="pin"><img src="./assets/img/pin.svg" alt=""></div>
-            <img src="${url}" alt="">
+            <div class="randomImage"><img src="${url}" alt=""></div>
             <div class="div cardtext">${title}</div>
         </div>
         `
@@ -26,15 +27,21 @@ axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6")
         });
         myRowEl.innerHTML = postItsEl
     
-        
+
         document.querySelectorAll('.postit').forEach(element => {
             element.addEventListener('click', function() {
-              modalEl.style.display = 'block';
-              modalImgEl.src = this.getAttribute('data-url');
-            });
-            //console.log(modalImgEl);
-            //console.log(element);
-          });
-          
-          
-    })
+                //seleziono le immagini
+                const imgEl = element.querySelector('.randomImage img');
+                //recupero il loro src
+                const imgSrc = imgEl.getAttribute('src');
+                modalEl.style.display = 'block';
+                //applico l scr in uscita uguale a quello delle immagini 
+                modalImgEl.src = imgSrc;
+                //console.log(imgEl);
+            }); 
+        });
+    });
+    //bottone chiusura modale 
+    closeModalEl.addEventListener('click', ()=>{
+    modalEl.style.display = 'none'
+   })

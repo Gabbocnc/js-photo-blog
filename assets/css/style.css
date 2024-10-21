@@ -1,20 +1,22 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 /* utilities */
-img{
+img {
     max-width: 100%;
 }
 
-.myrow{
+.myrow {
     flex-direction: column;
 
     @media (min-width: 992px) {
-        flex-direction:row;
+        flex-direction: row;
         flex-wrap: wrap;
     }
+
     @media (min-width: 1400px) {
         padding: 50px;
     }
@@ -22,10 +24,11 @@ img{
 
 
 /* header */
-header{
+header {
     background-image: url(../img/wall.png);
 }
-.title{
+
+.title {
     text-align: center;
     padding: 10px;
     font-size: 100px;
@@ -34,12 +37,12 @@ header{
 }
 
 /* main */
-body{
+body {
     background-image: url(../img/cork.png);
 }
 
 
-.postit{
+.postit {
     max-width: 300px;
     max-height: 350px;
     background-color: rgb(255, 255, 255);
@@ -52,32 +55,64 @@ body{
 
 }
 
-.pin{
+.pin {
     position: absolute;
     left: 45%;
     top: -18px;
 }
+
 .postit img {
     width: 100%;
     height: 50%;
     object-fit: cover;
+
     @media (min-width: 992px) {
         height: 80%;
     }
 }
-.cardtext{
+
+.cardtext {
     margin-top: 10px;
 }
 
-.postit:hover{
-  transform: rotate(10deg) scale(1.2);
+.postit:hover {
+    transform: rotate(10deg) scale(1.2);
 }
 
-
+/* #region modal */
 .modal {
     display: none;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
-  }
-  
+}
+
+.myContainer {
+    margin: auto;
+    padding: 20px;
+    width: 80%;
+    text-align: center;
+    margin-top: 100px;
+    position: relative;
+}
+
+.closeModal {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    bottom : 100%;
+    left: 47%;
+    color: black;
+    padding: 5px;
+    background-color: white;
+    margin-bottom: 30px;
+    font-size: 25px;
+}
+
+.closeModal:active{
+    
+}
+
+/* #endregion modal */
