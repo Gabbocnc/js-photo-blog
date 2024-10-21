@@ -25,14 +25,16 @@ axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6")
             postItsEl += markup
         });
         myRowEl.innerHTML = postItsEl
-        //console.log(postEl);
-  
-
-    })
-
-  
-    function showModal(url, title) {
-        modalEl.style.display = 'block';
-    }
     
-    myRowEl.addEventListener('click', showModal);
+        
+        document.querySelectorAll('.postit').forEach(element => {
+            element.addEventListener('click', function() {
+              modalEl.style.display = 'block';
+              modalImgEl.src = this.getAttribute('data-url');
+            });
+            //console.log(modalImgEl);
+            //console.log(element);
+          });
+          
+          
+    })
